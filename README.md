@@ -1,7 +1,9 @@
 # Music Finder
 3rd Assignment for DJUnicode Android Team 2019-20
+  
 This will be referred to as the base repo or the base fork
-Forking it to your account will make a head 
+  
+Forking it to your account will make a head fork 
 
 ### Steps to follow:
 1. Fork this repo to your account (make a head fork)
@@ -16,7 +18,7 @@ Avoid working on the same file at a same time to prevent merge conflicts. (Confl
 Use these steps to intialize:
 1. Add another remote url `upstream` using the command: `git remote add upstream <URL OF THE BASE FORK HERE>`
 2. Verify that you have two remotes, upstream and origin using `git remote -v`
-<br>
+  
 Before making changes to the code repeat these steps to be in sync:
 1. You have to fetch the changes in the base fork.
 2. Run command `git pull upstream <BRANCH NAME>`
