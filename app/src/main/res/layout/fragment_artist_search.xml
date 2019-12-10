@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/artistFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".artistSearchFragment">
+
+
+    <LinearLayout
+        android:id="@+id/artistLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/artistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:hint="Enter your Favorite artist" />
+
+        <Button
+            android:id="@+id/artistfragSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:hint="@android:string/search_go" />
+
+    </LinearLayout>
+
+</FrameLayout>
