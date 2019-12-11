@@ -5,6 +5,7 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        artistSearchFragment arFrag=new artistSearchFragment();
+        FragmentTransaction transaction=getSupportFragmentManager().beginTransaction().add(R.id.frame_layout_main,arFrag);
         mBottomNavigationView=findViewById(R.id.bottom_navigation);
         mBottomNavigationView.setOnNavigationItemReselectedListener(
             new BottomNavigationView.OnNavigationItemReselectedListener() {
@@ -23,15 +26,19 @@ public class MainActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                         case R.id.artistSearch:
-                           artistSearchFragment arFrag=new artistSearchFragment();
-                            FragmentTransaction ft=getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.frame_layout_main,arFrag);
-                            ft.commit();
+                            setFrag(arFrag);
                     }
                 }
             });
 
 
 
+    }
+
+    void setFrag(Fragment fragment)
+    {
+        FragmentTransaction ft=getSupportFragmentManager().beginTransaction()
+            .replace(R.id.frame_layout_main,fragment);
+        ft.commit();
     }
 }
