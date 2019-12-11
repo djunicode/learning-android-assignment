@@ -117,7 +117,7 @@ public class artistSearchFragment extends Fragment {
                                     setLayoutAnimation(AnimationUtils.loadLayoutAnimation(getContext(),R.anim.recycler_items_anim));
                                 artistSearchRecyclerView.setAdapter(adapter);
                                 artistSearchRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-                                    Toast.makeText(getContext(),output,Toast.LENGTH_LONG).show();
+                                    //Toast.makeText(getContext(),output,Toast.LENGTH_LONG).show();
 
                             } else
                                 {
