@@ -23,7 +23,7 @@
             android:text="Artist Search"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="#AFCFAF"
+            android:textColor="#EED8AE"
             android:textSize="30sp"
             android:textStyle="bold|italic" />
 
@@ -40,8 +40,8 @@
                 android:layout_weight="5"
                 android:elevation="4dp"
                 android:hint="Enter your Favorite artist"
-                android:textColor="#6EA96E	"
-                android:textColorHint="#6EA96E	" />
+                android:textColor="#F6EBD6	"
+                android:textColorHint="#F6EBD6	" />
 
             <Button
                 android:id="@+id/artistfragSearch"
