@@ -16,7 +16,7 @@
             android:id="@+id/bac"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#152935"
+            android:background="@drawable/back"
             android:orientation="vertical">
 
             <TextView
@@ -31,7 +31,7 @@
                 android:scrollbars="horizontal"
                 android:text="SingerName"
                 android:textAlignment="viewStart"
-                android:textColor="#42a5f5"
+                android:textColor="#426F42"
                 android:textSize="24sp"
                 android:textStyle="bold|italic" />
 
@@ -45,7 +45,7 @@
                 android:scrollbars="horizontal"
                 android:text="SinListeners"
                 android:textAlignment="viewStart"
-                android:textColor="#e3fefd"
+                android:textColor="#AFCFAF"
                 android:textSize="14sp" />
 
             <TextView
@@ -64,10 +64,10 @@
                 android:scrollbars="horizontal"
                 android:text="Top tracks available at"
                 android:textAlignment="textStart"
-                android:textColor="#e3fefd"
+                android:textColor="#AFCFAF"
                 android:textColorHighlight="#FFFFFF"
                 android:textColorHint="@color/design_default_color_on_primary"
-                android:textColorLink="@android:color/holo_purple"
+                android:textColorLink="#AFCFAF"
                 android:textSize="16sp" />
 
             <TextView
@@ -85,10 +85,10 @@
                 android:padding="2dp"
                 android:scrollbars="horizontal"
                 android:text="Top tracks available at"
-                android:textColor="#90caf9"
+                android:textColor="#6EA96E	"
                 android:textColorHighlight="@color/design_default_color_on_primary"
                 android:textColorHint="@color/design_default_color_background"
-                android:textColorLink="#90caf9"
+                android:textColorLink="#6EA96E	"
                 android:textSize="18sp" />
 
 

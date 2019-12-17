@@ -11,7 +11,7 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="0dp"
         android:layout_height="56dp"
-        android:background="#264160"
+        android:background="@color/design_default_color_on_secondary"
 
         android:elevation="8dp"
         app:elevation="8dp"
