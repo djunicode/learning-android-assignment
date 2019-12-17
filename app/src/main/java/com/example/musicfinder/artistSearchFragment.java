@@ -84,35 +84,24 @@ public class artistSearchFragment extends Fragment {
                             if (response.isSuccessful())
                             {
                                 String output=" ";
-                                //response.body().getResults();
                                Results results =response.body().getResults();
-                               // Toast.makeText(getContext(),"3",Toast.LENGTH_LONG).show();
                                Artistmatches artistmatches=results.getArtistmatches();
-                                //Toast.makeText(getContext(),"4",Toast.LENGTH_LONG).show();
                                List<Artist> arList =artistmatches.getArtist();
                                int n=arList.size();
                                 passName=new String[n];
                                 passList=new String[n];
                                 passUrl=new String[n];
-                            //    passImgUrl=new String[n];
-                                //Toast.makeText(getContext(),"5",Toast.LENGTH_LONG).show();
-                                for(int i = 0; i<arList.size(); i++)
+                            for(int i = 0; i<arList.size(); i++)
                                 {
-                                  //  Toast.makeText(getContext(),"6",Toast.LENGTH_LONG).show();
                                     String arName=arList.get(i).getName();
                                     passName[i]=arName;
                                     String arURL=arList.get(i).getUrl();
                                     passUrl[i]=arURL;
                                     String arListeners=arList.get(i).getListeners();
                                     passList[i]=arListeners;
-                                    //List<Image> img=arList.get(i).getImage();
-                                   // Image image=img.get(0);
-                                    //String imgUrl=image.getText();
-                                   // passImgUrl[i]=imgUrl;
                                     output=i+" "+arName+" "+arURL+" "+arListeners+" ";
                                 }
-                                RequestManager gg= Glide.with(getContext());
-                                RecyclerView.Adapter adapter = new AdapterArtistSearch(passName,passList,passUrl);
+                              RecyclerView.Adapter adapter = new AdapterArtistSearch(passName,passList,passUrl);
                                 artistSearchRecyclerView.
                                     setLayoutAnimation(AnimationUtils.loadLayoutAnimation(getContext(),R.anim.recycler_items_anim));
                                 artistSearchRecyclerView.setAdapter(adapter);
@@ -122,7 +111,6 @@ public class artistSearchFragment extends Fragment {
                             } else
                                 {
                                     Toast.makeText(getContext(),"Error loading data",Toast.LENGTH_LONG).show();
-
                                 }
 
                         }

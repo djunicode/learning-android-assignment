@@ -16,7 +16,7 @@
             android:id="@+id/bac"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/back"
+            android:background="#152935"
             android:orientation="vertical">
 
             <TextView
@@ -30,10 +30,10 @@
                 android:paddingTop="10dp"
                 android:scrollbars="horizontal"
                 android:text="SingerName"
-                android:textAlignment="center"
-                android:textColor="@android:color/holo_blue_bright"
+                android:textAlignment="viewStart"
+                android:textColor="#42a5f5"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textStyle="bold|italic" />
 
             <TextView
                 android:id="@+id/SinListeners"
@@ -44,8 +44,8 @@
                 android:inputType="textPersonName"
                 android:scrollbars="horizontal"
                 android:text="SinListeners"
-                android:textAlignment="center"
-                android:textColor="@color/design_default_color_on_primary"
+                android:textAlignment="viewStart"
+                android:textColor="#e3fefd"
                 android:textSize="14sp" />
 
             <TextView
@@ -63,10 +63,10 @@
                 android:padding="2dp"
                 android:scrollbars="horizontal"
                 android:text="Top tracks available at"
-                android:textAlignment="center"
-                android:textColor="@android:color/holo_orange_light"
-                android:textColorHighlight="@color/design_default_color_on_primary"
-                android:textColorHint="@color/design_default_color_background"
+                android:textAlignment="textStart"
+                android:textColor="#e3fefd"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorHint="@color/design_default_color_on_primary"
                 android:textColorLink="@android:color/holo_purple"
                 android:textSize="16sp" />
 
@@ -85,10 +85,10 @@
                 android:padding="2dp"
                 android:scrollbars="horizontal"
                 android:text="Top tracks available at"
-                android:textColor="@android:color/holo_purple"
+                android:textColor="#90caf9"
                 android:textColorHighlight="@color/design_default_color_on_primary"
                 android:textColorHint="@color/design_default_color_background"
-                android:textColorLink="@android:color/holo_purple"
+                android:textColorLink="#90caf9"
                 android:textSize="18sp" />
 
 

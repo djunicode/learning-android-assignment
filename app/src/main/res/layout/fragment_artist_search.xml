@@ -11,20 +11,22 @@
 
     <LinearLayout
         android:id="@+id/artistLLayout"
-        android:background="@drawable/back"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#010205"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="52dp"
+            android:background="#264160"
             android:text="Artist Search"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="@android:color/holo_orange_light"
+            android:textColor="#e3fefd"
             android:textSize="30sp"
             android:textStyle="bold|italic" />
+
         <LinearLayout
             android:id="@+id/artistLinearLayout"
             android:layout_width="match_parent"
@@ -34,23 +36,27 @@
             <EditText
                 android:id="@+id/artistName"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="5"
+                android:background="#325c80"
+                android:backgroundTint="#325c80"
+                android:elevation="4dp"
                 android:hint="Enter your Favorite artist"
-                android:textColor="@android:color/holo_blue_bright"
-                android:textColorHint="@android:color/holo_purple" />
+                android:textColor="#42a5f5"
+                android:textColorHint="#42a5f5" />
 
             <Button
                 android:id="@+id/artistfragSearch"
                 android:layout_width="45dp"
 
                 android:layout_height="45dp"
-                android:background="@android:drawable/ic_menu_search"
-                android:backgroundTint="@color/design_default_color_background"
-                android:textColor="@color/design_default_color_background"
-                android:textColorHighlight="@color/design_default_color_secondary"
+                android:background="#2196f3"
+                android:backgroundTint="#2196f3"
+                android:elevation="4dp"
+                android:hint="Go!"
+                android:textColor="#e3fefd"
                 android:textColorHint="@color/design_default_color_background"
-                android:textColorLink="@color/design_default_color_secondary" />
+                android:textColorLink="#2196f3" />
 
         </LinearLayout>
 
