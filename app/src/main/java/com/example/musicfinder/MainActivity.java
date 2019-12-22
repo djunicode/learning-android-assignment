@@ -3,40 +3,45 @@ package com.example.musicfinder;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-Fragment fg;
+    BottomNavigationView mBottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BottomNavigationView bv;
-        bv=findViewById(R.id.bottomnav);
-        bv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-                switch (menuItem.getItemId())
-                {
-                    case R.id.album:fg=new AlbumSearch();
-                        break;
-                    case R.id.track:
-                        break;
-                    case R.id.artist:
-                        break;
+     //   FragmentTransaction transaction=getSupportFragmentManager().beginTransaction().add(R.id.frame_layout_main,arFrag);
+        mBottomNavigationView=findViewById(R.id.bottom_navigation);
+        mBottomNavigationView.setOnNavigationItemReselectedListener(
+            new BottomNavigationView.OnNavigationItemReselectedListener() {
+                @Override
+                public void onNavigationItemReselected(@NonNull MenuItem item) {
 
+                    switch (item.getItemId()) {
+                        case R.id.artistSearch:
+
+                            setFrag(new artistSearchFragment());
+                            break;
+                        case R.id.albumSearch:setFrag(new AlbumSearch());
+                    }
                 }
+            });
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame,fg).commit();
-                return true;
-            }
-        });
 
+
+    }
+
+    void setFrag(Fragment fragment)
+    {
+        FragmentTransaction ft=getSupportFragmentManager().beginTransaction()
+            .replace(R.id.frame_layout_main,fragment);
+        ft.commit();
     }
 }

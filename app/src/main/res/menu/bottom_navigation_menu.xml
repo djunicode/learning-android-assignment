@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/trackSearch"
+        android:icon="@drawable/ic_track"
+        android:title="trackSearch" />
+    <item
+        android:id="@+id/albumSearch"
+        android:icon="@drawable/ic_album"
+        android:title="albumSearch" />
+    <item
+        android:id="@+id/artistSearch"
+        android:icon="@drawable/ic_artist"
+        android:title="artistSearch" />
+    <item
+        android:id="@+id/tagTopSongs"
+        android:title="tagTopSongs" />
+    <item
+        android:id="@+id/tagTopArtist"
+        android:title="tagTopArtist" />
+</menu>

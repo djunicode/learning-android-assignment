@@ -10,12 +10,12 @@ public class AlbumResponseModel {
 @SerializedName("url")
     private String  url;
 
-    public List<Image> getImage() {
+    public List<AlbumSearchImage> getImage() {
         return image;
     }
 
     private String name;
-List<Image> image;
+List<AlbumSearchImage> image;
     public AlbumResponseModel(String artist, String url, String name) {
         this.artist = artist;
         this.url = url;

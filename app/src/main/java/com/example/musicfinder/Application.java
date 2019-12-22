@@ -6,18 +6,18 @@ import java.util.ArrayList;
 
 public class Application {
 @SerializedName("results")
-    Results ResultsObject;
+    AlbumSearchResults ResultsObject;
 
 
     // Getter Methods
 
-    public Results getResults() {
+    public AlbumSearchResults getResults() {
         return ResultsObject;
     }
 
     // Setter Methods
 
-    public void setResults( Results resultsObject ) {
+    public void setResults( AlbumSearchResults resultsObject ) {
         this.ResultsObject = resultsObject;
     }
 }

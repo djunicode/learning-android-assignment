@@ -1,20 +1,31 @@
 package com.example.musicfinder;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Image
-{@SerializedName("#text")
-    private String url ;
+public class Image {
+
+    @SerializedName("#text")
+    @Expose
+    private String text;
+    @SerializedName("size")
+    @Expose
     private String size;
-    public Image(String url) {
-        this.url = url;
+
+    public String getText() {
+        return text;
     }
 
-    public String getUrl() {
-        return url;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public String getSize() {
         return size;
     }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
 }

@@ -70,7 +70,7 @@ public class AlbumSearch extends Fragment {
                            if(response.isSuccessful()) {
 
                                 Application app=response.body();
-                                Results res=app.ResultsObject;
+                                AlbumSearchResults res=app.ResultsObject;
                                 Albummatches am=res.AlbummatchesObject;
 
                                list = am.album;
