@@ -1,4 +1,3 @@
-
 package com.example.musicfinder;
 
 import com.google.gson.annotations.Expose;

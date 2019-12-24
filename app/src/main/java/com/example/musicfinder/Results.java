@@ -1,9 +1,7 @@
 
 package com.example.musicfinder;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
 public class Results {
 
     @SerializedName("opensearch:totalResults")
@@ -50,6 +48,7 @@ public class Results {
     public void setArtistmatches(Artistmatches artistmatches) {
         this.artistmatches = artistmatches;
     }
+
 
 
 

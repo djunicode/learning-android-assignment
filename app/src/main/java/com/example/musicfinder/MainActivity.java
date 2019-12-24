@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        artistSearchFragment arFrag=new artistSearchFragment();
-        FragmentTransaction transaction=getSupportFragmentManager().beginTransaction().add(R.id.frame_layout_main,arFrag);
+
+     //   FragmentTransaction transaction=getSupportFragmentManager().beginTransaction().add(R.id.frame_layout_main,arFrag);
         mBottomNavigationView=findViewById(R.id.bottom_navigation);
         mBottomNavigationView.setOnNavigationItemReselectedListener(
             new BottomNavigationView.OnNavigationItemReselectedListener() {
@@ -26,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                         case R.id.artistSearch:
-                            setFrag(arFrag);
+
+                            setFrag(new artistSearchFragment());
+                            break;
+                        case R.id.albumSearch:setFrag(new AlbumSearch());
                     }
                 }
             });
