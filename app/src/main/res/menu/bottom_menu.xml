@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/Track_search"
+        android:title="@string/head_track"
+        android:icon="@drawable/ic_action_track"
+        android:enabled="true"
+        />
+    <item
+        android:id="@+id/Album_search"
+        android:title="@string/head_album"
+        android:enabled="true"
+        />
+    <item
+        android:id="@+id/Artist_search"
+        android:title="@string/head_artist"
+        android:enabled="true"
+        />
+    <item
+        android:id="@+id/TopSongs_search"
+        android:title="@string/head_top_songs"
+        android:enabled="true"
+        />
+    <item
+        android:id="@+id/TopArtist_search"
+        android:title="@string/head_top_artist"
+        android:enabled="true"
+        />
+</menu>
