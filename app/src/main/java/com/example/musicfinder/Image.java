@@ -29,4 +29,3 @@ public class Image {
         this.size = size;
     }
 
-}

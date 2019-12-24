@@ -35,10 +35,36 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     void setFrag(Fragment fragment)
     {
         FragmentTransaction ft=getSupportFragmentManager().beginTransaction()
                 .replace(R.id.frame_layout_main,fragment);
+        mBottomNavigationView=findViewById(R.id.bottom_navigation);
+        mBottomNavigationView.setOnNavigationItemReselectedListener(
+            new BottomNavigationView.OnNavigationItemReselectedListener() {
+                @Override
+                public void onNavigationItemReselected(@NonNull MenuItem item) {
+
+                    switch (item.getItemId()) {
+                        case R.id.artistSearch:
+
+                            setFrag(new artistSearchFragment());
+                            break;
+                        case R.id.albumSearch:setFrag(new AlbumSearch());
+                    }
+                }
+            });
+
+
+
+    }
+
+    void setFrag(Fragment fragment)
+    {
+        FragmentTransaction ft=getSupportFragmentManager().beginTransaction()
+            .replace(R.id.frame_layout_main,fragment);
+
         ft.commit();
     }
 }
