@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+     <androidx.cardview.widget.CardView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/cardview"
+         app:cardCornerRadius="50px"
+        android:paddingTop="50px"
+         android:layout_marginTop="20px"
+         android:layout_marginLeft="20px"
+         android:layout_marginRight="20px"
+
+         >
+         <!--<RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+
+             android:paddingTop="6dp"
+             android:paddingBottom="5dp"
+             android:paddingLeft="6dp">
+         --><LinearLayout
+         android:paddingTop="6dp"
+         android:paddingBottom="5dp"
+         android:paddingLeft="6dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:id="@+id/LinearLayout1">
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/namedisplay"
+                 android:fontFamily="sans-serif"
+                 android:textSize="55px"
+                 ></TextView>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="3dp"
+                 android:id="@+id/urldisplay"
+                 android:visibility="invisible"
+                 ></TextView>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/artistdisplay"
+                 android:fontFamily="serif"
+                 android:textStyle="italic"
+                 ></TextView>
+
+
+         </LinearLayout>
+
+             <!--<ImageView
+                 android:id="@+id/imageView"
+                    android:layout_alignParentRight="true"
+                 android:layout_marginRight="9dp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="8dp"
+                 android:src="@drawable/ic_play" />
+         </RelativeLayout>-->
+     </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -3,19 +3,21 @@
 
 
     <item
-        android:id="@+id/Track_search"
+        android:id="@+id/trackSearch"
         android:title="@string/head_track"
         android:icon="@drawable/ic_action_track"
         android:enabled="true"
         />
     <item
-        android:id="@+id/Album_search"
+        android:id="@+id/albumSearch"
         android:title="@string/head_album"
+        android:icon="@drawable/ic_album"
         android:enabled="true"
         />
     <item
-        android:id="@+id/Artist_search"
+        android:id="@+id/artistSearch"
         android:title="@string/head_artist"
+        android:icon="@drawable/ic_artist"
         android:enabled="true"
         />
     <item
@@ -28,4 +30,5 @@
         android:title="@string/head_top_artist"
         android:enabled="true"
         />
+
 </menu>

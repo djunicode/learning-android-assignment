@@ -30,8 +30,16 @@ public class MainActivity extends AppCompatActivity {
 
             switch (menuItem.getItemId())
             {
-                case R.id.Track_search:
+                case R.id.trackSearch:
                     fragment = new TrackSearch_Fragment();
+                    break;
+
+                case R.id.artistSearch:
+                    fragment = new artistSearchFragment();
+                    break;
+
+                case R.id.albumSearch:
+                    fragment = new AlbumSearch();
                     break;
             }
                 loadFragment(fragment);
