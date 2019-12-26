@@ -8,8 +8,9 @@
     tools:context=".MainActivity">
 
 
+
     <FrameLayout
-        android:id="@+id/fragment_container"
+        android:id="@+id/frame_layout_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="55dp"
@@ -25,11 +26,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="1dp"
         app:menu="@menu/bottom_menu"
-        app:labelVisibilityMode="labeled"
+        android:background="@color/colorBlack"
         app:itemBackground="@color/colorBlack"
         app:itemIconTint="@color/colorWhite"
         app:itemTextColor="@color/colorWhite"
+        app:itemRippleColor="@color/colorWhite"                                                           
         />
 
+
+
+
+    
+        
+
+    
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,11 +16,15 @@ public interface ArtistSearchAPIInterface {
 
     //method=artist.search&artist=selena&api_key=ca2ce4bd011365f7253c207a6bb93f80&format=json
     @GET("/2.0/")
+
     Call<ArtistSearchPOJO> getArtistSearchResponse(
             @Query("method") String method,
             @Query("artist") String k,
             @Query("api_key") String key,
             @Query("format") String format
+
+    
+
     );
 
 //<ArtistSearchPOJO>

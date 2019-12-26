@@ -1,5 +1,6 @@
 package com.example.musicfinder;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -9,8 +10,16 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+import android.os.Bundle;
+import android.view.MenuItem;
 
+
+
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+public class MainActivity extends AppCompatActivity {
+    BottomNavigationView mBottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -19,41 +28,40 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navlistener);
 
-        loadFragment(new TrackSearch_Fragment());
+        setFrag(new TrackSearch_Fragment());
+
+    
+    
+=======
+     //   FragmentTransaction transaction=getSupportFragmentManager().beginTransaction().add(R.id.frame_layout_main,arFrag);
+        mBottomNavigationView=findViewById(R.id.bottom_navigation);
+        mBottomNavigationView.setOnNavigationItemReselectedListener(
+            new BottomNavigationView.OnNavigationItemReselectedListener() {
+                @Override
+                public void onNavigationItemReselected(@NonNull MenuItem item) {
+
+                    switch (item.getItemId()) {
+                        case R.id.trackSearch:
+                    setFrag(new TrackSearch_Fragment());
+                    break;
+                       
+                        case R.id.artistSearch:
+
+                            setFrag(new artistSearchFragment());
+                            break;
+                        case R.id.albumSearch:setFrag(new AlbumSearch());
+                    }
+                }
+            });
+
+
 
     }
-    BottomNavigationView.OnNavigationItemSelectedListener navlistener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-            Fragment fragment = null;
-
-            switch (menuItem.getItemId())
-            {
-                case R.id.trackSearch:
-                    fragment = new TrackSearch_Fragment();
-                    break;
-
-                case R.id.artistSearch:
-                    fragment = new artistSearchFragment();
-                    break;
-
-                case R.id.albumSearch:
-                    fragment = new AlbumSearch();
-                    break;
-            }
-                loadFragment(fragment);
-            return false;
-        }
-    };
-
-    public void loadFragment(Fragment frag)
+    void setFrag(Fragment fragment)
     {
-        FragmentManager fragmentManager = this.getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container,frag,null);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+        FragmentTransaction ft=getSupportFragmentManager().beginTransaction()
+            .replace(R.id.frame_layout_main,fragment);
+        ft.commit();
     }
-
 }
