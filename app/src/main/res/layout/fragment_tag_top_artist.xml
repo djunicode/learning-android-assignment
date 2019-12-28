@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TagTopArtistFragment">
+
+    <LinearLayout
+        android:id="@+id/tagTopArtistLLayout"
+        android:background="@drawable/music"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Tag Top Artist"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+        <LinearLayout
+            android:id="@+id/artistLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/tagTopArtistName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:hint="Enter the genre"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textColorHint="@android:color/holo_purple" />
+
+            <Button
+                android:id="@+id/tagTopArtistfragSearch"
+                android:layout_width="45dp"
+
+                android:layout_height="45dp"
+                android:background="@android:drawable/ic_menu_search"
+                android:backgroundTint="@color/design_default_color_background"
+                android:textColor="@color/design_default_color_background"
+                android:textColorHighlight="@color/design_default_color_secondary"
+                android:textColorHint="@color/design_default_color_background"
+                android:textColorLink="@color/design_default_color_secondary" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tagTopArtistSearchRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</FrameLayout>

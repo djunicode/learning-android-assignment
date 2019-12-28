@@ -1,3 +1,4 @@
+
 package com.example.musicfinder;
 
 import com.google.gson.annotations.Expose;
@@ -28,4 +29,3 @@ public class Image {
         this.size = size;
     }
 
-}

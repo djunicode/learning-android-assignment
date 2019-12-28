@@ -13,6 +13,7 @@ public class Artist {
     @SerializedName("listeners")
     @Expose
     private String listeners;
+
     @SerializedName("mbid")
     @Expose
     private String mbid;
@@ -26,6 +27,11 @@ public class Artist {
     @Expose
     private List<Image> image = null;
 
+    @SerializedName("@attr")
+    @Expose
+    private Attr attr;
+
+
     public String getName() {
         return name;
     }
@@ -33,6 +39,7 @@ public class Artist {
     public void setName(String name) {
         this.name = name;
     }
+
 
     public String getListeners() {
         return listeners;
@@ -72,6 +79,15 @@ public class Artist {
 
     public void setImage(List<Image> image) {
         this.image = image;
+    }
+
+
+    public Attr getAttr() {
+        return attr;
+    }
+
+    public void setAttr(Attr attr) {
+        this.attr = attr;
     }
 
 }

@@ -22,18 +22,35 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView mBottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_main );
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(navlistener);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        final TagTopArtistFragment ttFrag=new TagTopArtistFragment();
+        FragmentTransaction transaction=getSupportFragmentManager().beginTransaction().add(R.id.frame_layout_main,ttFrag);
+        mBottomNavigationView=findViewById(R.id.bottom_navigation);
+        mBottomNavigationView.setOnNavigationItemReselectedListener(
+                new BottomNavigationView.OnNavigationItemReselectedListener() {
+                    @Override
+                    public void onNavigationItemReselected(@NonNull MenuItem item) {
 
-        setFrag(new TrackSearch_Fragment());
+                        switch (item.getItemId()) {
+                            case R.id.tagTopArtist:
+                                setFrag(ttFrag);
+                        }
+                    }
+                });
 
-    
-    
-=======
-     //   FragmentTransaction transaction=getSupportFragmentManager().beginTransaction().add(R.id.frame_layout_main,arFrag);
+
+
+    }
+
+
+    void setFrag(Fragment fragment)
+    {
+        FragmentTransaction ft=getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frame_layout_main,fragment);
+
+     //   FragmentTransaction transaction=getSupportFragmentManager().beginTransaction().add(R.id.frame_layout_main,arFr
         mBottomNavigationView=findViewById(R.id.bottom_navigation);
         mBottomNavigationView.setOnNavigationItemReselectedListener(
             new BottomNavigationView.OnNavigationItemReselectedListener() {
@@ -62,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
     {
         FragmentTransaction ft=getSupportFragmentManager().beginTransaction()
             .replace(R.id.frame_layout_main,fragment);
+
         ft.commit();
     }
 }
